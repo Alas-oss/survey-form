@@ -4,59 +4,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css"/>
-    <title>Sleep Survey Form</title>
+    <meta charset="UTF-8">
+    <title>English Language Learning Form</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 id="title">Pomodoro</h1>
-    <p id="description" class="established">i need sleep</p>
-    <form id="survey-form" action='https://survey-form.freecodecamp.rocks/?name=Jan&email=jan.mlinaric%40gmail.com&age=22&role=student&user-recommend=definitely&mostLike=challenges&prefer=back-end-projects&comment=a'>
+    <h1 id="title">English Language Learning Form</h1>
+    <p id="description"><i>This form helps us personalize your lessons.</i></p>
+  <form method="post" id="survey-form">
+    <feildset>
+      <label 
+        for="name" id="name-label">Name<input id="name" name="name" type="text" placeholder="enter your name" required></label>
+      <label
+        for="email" id="email-label">Email <input id="email" name="email" type="email" placeholder="enter your email" required></label>
+      <label   
+        for="occupation">Occupation <input id="occupation=label" name="occupation" type="text"></label>
+     <label
+        for="age" id="number-label">Age <input id="number" name="age" class="age" type="number" min="4" max="99" placeholder="enter your age" ></label>
+    </fieldset>
     <fieldset>
-      <label id="name-label">name<input id="name" type="text" placeholder="enter your name" required /></label>
-      <label id="email-label">email<input id="email" type="email" required placeholder="example@gmail.com"/></label>
-      <label id="number-label">email<input id="number" type="number" required min="13" max="113" placeholder="age"/></label>
-      <label> which one of these best describes you current sleep situation
-        <select id="dropdown">
-          <option value="">Select which one applies</option>
-          <option value="1">8 hours</option>
-          <option value="2">7-5 hour</option>
-          <option value="3">4-2 hours</option>
-          <option value="4">one hour</option>
-          <option value="5">I refuse to sleep</option>
+      <label
+        for="level" class="level"> What is your current English level?<input id="level-0" type="radio" name="level1" class="level" value="no-knowledge"/> No Knowledge<br>
+     <input id="level-1" type="radio" name="level1" class="level" value="beginner"/> Beginner<br><input id="level-2" type="radio" name="level2" class="level" value="intermediate"/> Intermediate<br><input id="level-3" type="radio" name="level2" class="level" value="advanced"/> Advanced</label>
+    </fieldset>
+    <fieldset>
+      <label for="reason">Why do you want to learn English? <select id="dropdown" 
+       name="reason" 
+        <option value="">(select one)</option>
+        <option value="1">Conversation</option>
+        <option value="2">Business</option>
+        <option value="3">Both</option> 
         </select>
       </label>
     </fieldset>
     <fieldset>
-      <label> would you recomend sleep to your freinds?</label>
-      <label><input type="radio" class="inline" name="attribute" value="1 checked" /> 10/10 would recomend</label>
-      <label><input type="radio" class="inline" name="attribute" value="2" /> Up too you</label>
-      <label><input type="radio" class="inline" name="attribute" value="3" /> Sleep is for the weak</label>
+      <label for="reason">What would you like to focus on?<br><em>Check all that apply.</em></label> 
+       <label><input type="checkbox" name="Speaking" id="Speaking" value="Speaking" class="inline" />Speaking</label> 
+       <label><input type="checkbox" name="Writing" id="Writing" value="Writing" class="inline" />Writing</label>
+       <label><input type="checkbox" name="Reading" id="Reading" value="Reading" class="inline" />Reading</label>
+       <label><input type="checkbox" name="Understanding" id="Understanding" value="Understanding" class="inline" />Understanding</label>
     </fieldset>
     <fieldset>
-      <label>What is your favorite thing about sleep
-        <select id="dropdown2">
-          <option value="">Pick one</option>
-          <option value="1">The energy</option>
-          <option value="2">Health</option>
-          <option value="3">The bags under the eyes</option>
-        </select>
-      </label>
+      <label
+        for="interests">What are your interests?<em> Provide 3 </em> <input id="interests-label" name="interests" class="interests" required></label>
+    <label for="additional information">Additional Information <textarea>If there is any other information you would like to share please write it here.</textarea></label>
     </fieldset>
     <fieldset>
-      <label> Anything else?
-        <textarea rows="5" cols="50" placeholder="enter your comment here..."></textarea>
-      </label>
-    </fieldset>
-    <fieldset>
-      <input type="submit" values="Submit" id="submit" />
-    </fieldset>
-    <fieldset>
-      <label> would you recomend sleep to your freinds?</label>
-      <label><input type="checkbox" class="inline" name="attribute" value="1 checked" /> 10/10 would recomend</label>
-      <label><input type="checkbox" class="inline" name="attribute" value="2" /> Up too you</label>
-      <label><input type="checkbox" class="inline" name="attribute" value="3" /> Sleep is for the weak</label>
+      <label for="terms-and-conditions">
+          <input id="terms-and-conditions" type="checkbox" value="checkbox" required name="terms-and-conditions" class="inline" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions.</a>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit"/>
     </form>
   </body>
 </html>
